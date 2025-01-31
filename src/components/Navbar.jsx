@@ -12,10 +12,10 @@ const Navbar = () => {
   const links = [
     //set loader to home true when clicked
     <li key="home"><Link to="/" onClick={() => setLoading(true)}>Home</Link></li>,
-    <li key="all-service"><Link to="/allservice" onClick={() => setLoading(true)}>All Service</Link></li>,
-    user && <li key="add-service"><Link to="/add-service">Add Service</Link></li>,
-    user && <li key="manage-service"><Link to="/manage-service">Manage Service</Link></li>,
-    user && <li key="booked-service"><Link to="/booked-service">Booked Service</Link></li>,
+    <li key="all-service"><Link to="/allservice" onClick={() => setLoading(true)}>All Car</Link></li>,
+    user && <li key="add-service"><Link to="/add-service">Add Car</Link></li>,
+    user && <li key="manage-service"><Link to="/manage-service">Manage Car</Link></li>,
+    user && <li key="booked-service"><Link to="/booked-service">Booked Car</Link></li>,
     user && <li key="services-todo"><Link to="/services-todo">Service To Do</Link></li>,
     <li key="faq"><Link to="/faq">FAQ</Link></li>,
   ];
@@ -51,7 +51,7 @@ const Navbar = () => {
         >
           <div className="btn btn-ghost text-2xl  italic flex items-center pl-0 md:pl-4 gap-2 ">
           <GiTreeBeehive className='text-yellow-300 text-3xl text-center'/>
-            <span className="text-center hidden sm:block font-bold">Consult Hive</span>
+            <span className="text-center hidden sm:block font-bold">Rental car</span>
           </div>
         </Link>
       </div>

@@ -6,9 +6,9 @@ const Footer = () => {
       <aside>
         <img src={Logo} className="w-16 bg-white rounded-full" alt="ConsultHive Logo" />
         <p>
-          ConsultHive
+          Rental car
           <br />
-          Empowering businesses with expert consulting since 2023
+          Standing by the people since 2023
         </p>
       </aside>
       <nav>
