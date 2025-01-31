@@ -15,7 +15,7 @@ const ServicesTodo = () => {
         if (user) {
             setLoading(true);
             axios
-                .get(`https://consult-hive-server.vercel.app/servicestodo?email=${email}`, {
+                .get(`https://casdfgh/servicestodo?email=${email}`, {
                     withCredentials: true,
                 })
                 .then((res) => {
@@ -34,7 +34,7 @@ const ServicesTodo = () => {
         //console.log(`Booking ID: ${id}, New Status: ${newStatus}`);
         // Optional: Call an API to update the status in the backend
         axios
-            .patch(`https://consult-hive-server.vercel.app/bookedservices/${id}`, { status: newStatus })
+            .patch(`https://asdfgh/bookedservices/${id}`, { status: newStatus })
             .then((res) => {
                 //console.log(res.data);
                 if (res.data.modifiedCount) {
@@ -51,7 +51,7 @@ const ServicesTodo = () => {
 
             {/* Show a message if there are no bookings */}
             {bookings.length === 0 && !loading && (
-                <p className="text-center text-xl text-gray-500 mb-96">You have no services to do</p>
+                <p className="text-center text-xl text-gray-500 mb-96">You have no services and car to do</p>
             )}
 
             {/* Loading spinner */}
@@ -65,7 +65,7 @@ const ServicesTodo = () => {
                         <thead>
                             <tr>
                                 <th>Service Name</th>
-                                <th>Instructions</th>
+                                <th>Provider</th>
                                 <th>Date</th>
                                 <th>Status</th>
                                 <th></th>

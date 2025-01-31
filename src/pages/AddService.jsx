@@ -24,7 +24,7 @@ const AddService = () => {
             photoURL: photoURL
         }
         // console.log(data);
-        axios.post('https://consult-hive-server.vercel.app/services', data)
+        axios.post('https://asdfgh/services', data)
         .then(res => {
             // console.log(res.data);
             if(res.data.acknowledged){
@@ -39,9 +39,9 @@ const AddService = () => {
         <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Add Service</h1>
+                    <h1 className="text-5xl font-bold">Add Car</h1>
                     <p className="py-6">
-                        Describe your service Here. Clients will be able to see your services that you provide here.
+                        Describe your car Here. Clients will be able to see your car specifications that you provide here.
                     </p>
                 </div>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -50,7 +50,7 @@ const AddService = () => {
                         <fieldset className="fieldset">
                             <label className="fieldset-label">Image URL</label>
                             <input name="url" required type="url" className="input" placeholder="Image URL of the Service" />
-                            <label className="fieldset-label">Service Name</label>
+                            <label className="fieldset-label">Car Name</label>
                             <input name="name" required type="text" className="input" placeholder="Service Name" />
                             <label className="fieldset-label">Price</label>
                             <input name="price" required type="number" className="input" placeholder="Price" />

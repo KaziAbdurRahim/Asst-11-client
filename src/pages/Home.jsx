@@ -33,7 +33,7 @@ const Home = () => {
             {/* news letter */}
             <div className="bg-base-200 p-6 rounded-lg my-8 text-center">
                 <h2 className="text-xl font-bold mb-4">Stay Updated</h2>
-                <p className="mb-4">Subscribe to our newsletter for the latest consultaions and updates.</p>
+                <p className="mb-4">Subscribe to our newsletter for the latest services, cars, and updates.</p>
                 <form className="flex justify-center gap-2">
                     <input
                         type="email"

@@ -21,10 +21,10 @@ const AllServices = () => {
     return (
         <div>
             <Helmet>
-                <title>All Hive</title>
+                <title>All Car</title>
             </Helmet>
 
-            <h1 className="text-center text-3xl font-bold py-10">Search Services</h1>
+            <h1 className="text-center text-3xl font-bold py-10">Search Services/Car</h1>
 
             {/* Search Input */}
             <div className="mb-6 flex flex-col mx-auto justify-center items-center">
@@ -41,7 +41,7 @@ const AllServices = () => {
                     <div className="mb-8 mx-auto">
                         <h2 className="text-xl font-semibold mb-10">Search Results</h2>
                         {filteredServices.length === 0 ? (
-                            <p>No services found matching your search.</p>
+                            <p>No services/Car found matching your search.</p>
                         ) : (
                             filteredServices.map((service) => (
                                 <div key={service._id} className=" flex justify-between gap-10 mb-1 border p-2 px-4">
@@ -60,7 +60,7 @@ const AllServices = () => {
 
 
             {/* All Services Section */}
-            <h1 className="text-center text-3xl font-bold py-10">All Services</h1>
+            <h1 className="text-center text-3xl font-bold py-10">All Car</h1>
             <div className="flex flex-col mx-auto gap-y-7">
                 {consultaionServices.map((service) => (
                     <AllHomeCard key={service._id} {...service} />
