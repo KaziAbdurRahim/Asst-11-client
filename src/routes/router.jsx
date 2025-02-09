@@ -24,17 +24,17 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch("https://consult-hive-server.vercel.app/featureservices"),
+                loader: () => fetch("http://localhost:5000/featureservices"),
             },
             {
                 path: "/allservice",
                 element: <AllServices></AllServices>,
-                loader: () => fetch("https://consult-hive-server.vercel.app/services"),
+                loader: () => fetch("http://localhost:5000/services"),
             },
             {
                 path: "/service/:id",
                 element: <PrivateRoute> <ServiceDetails /> </PrivateRoute>,
-                loader: ({params}) => fetch(`https://consult-hive-server.vercel.app/services/${params.id}`),
+                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
             },
             {
                 path: "/add-service",
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
             {
                 path: "/upadate-service/:id",
                 element: <PrivateRoute> <UpdateService /> </PrivateRoute>,
-                loader: ({params}) => fetch(`https://consult-hive-server.vercel.app/services/${params.id}`),
+                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
             },
             {
                 path: "/booked-service",

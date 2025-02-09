@@ -23,7 +23,7 @@ const DetailsCard = ({ url, name, price, area, description, email: providerEmail
         };
         //console.log("Booking Data:", bookingData);
 
-        axios.post("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAP9LkMLQ7w0yuJWW_tVH4mAe4K1_lf-gcOw&s", bookingData).then(req => {
+        axios.post("http://localhost:5000/book-services", bookingData).then(req => {
             //console.log(req.data);
             if (req.data.insertedId) {
                 Swal.fire({
@@ -77,10 +77,10 @@ const DetailsCard = ({ url, name, price, area, description, email: providerEmail
             {/* Modal */}
             <dialog id={_id} className="modal modal-bottom sm:modal-middle">
                 <form method="dialog" className="modal-box" onSubmit={handleBookingSubmit}>
-                    <h3 className="font-bold text-lg">Book a car</h3>
+                    <h3 className="font-bold text-lg">Book Service</h3>
                     <div className="py-4 space-y-3">
                         <div className="flex flex-col">
-                            <label className="font-medium">ID</label>
+                            <label className="font-medium">Service ID</label>
                             <input
                                 type="text"
                                 value={_id}
@@ -89,7 +89,7 @@ const DetailsCard = ({ url, name, price, area, description, email: providerEmail
                             />
                         </div>
                         <div className="flex flex-col">
-                            <label className="font-medium">Brand Name</label>
+                            <label className="font-medium">Service Name</label>
                             <input
                                 type="text"
                                 value={name}
@@ -98,7 +98,7 @@ const DetailsCard = ({ url, name, price, area, description, email: providerEmail
                             />
                         </div>
                         <div className="flex flex-col">
-                            <label className="font-medium">Car Image</label>
+                            <label className="font-medium">Service Image</label>
                             <input
                                 type="text"
                                 value={url}

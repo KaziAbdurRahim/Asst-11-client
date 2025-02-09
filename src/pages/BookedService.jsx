@@ -15,7 +15,7 @@ const BookedService = () => {
         if (user) {
             setLoading(true);
             axios
-                .get(`https://vbnm=${email}`, {
+                .get(`http://localhost:5000/bookedservices?email=${email}`, {
                     withCredentials: true,
                 })
                 .then((res) => {
@@ -30,16 +30,28 @@ const BookedService = () => {
         }
     }, []);
 
-    
+    // const updateStatus = (id, newStatus) => {
+    //     console.log(`Booking ID: ${id}, New Status: ${newStatus}`);
+    //     // Optional: Call an API to update the status in the backend
+    //     axios
+    //         .patch(`http://localhost:5000/bookedservices/${id}`, { status: newStatus })
+    //         .then((res) => {
+    //             console.log(res.data);
+    //             if (res.data.modifiedCount) {
+    //                 Swal.fire('Success', 'Status updated successfully!', 'success');
+    //             }
+    //         })
+    //         .catch((err) => console.error('Error updating status:', err));
+    // };
 
     return (
         <div>
-            <Helmet><title>Booked Car</title></Helmet>
+            <Helmet><title>Booked Hive</title></Helmet>
             <h1 className="text-center text-3xl font-bold py-10">Booked Services</h1>
 
             {/* Show a message if there are no bookings */}
             {bookings.length === 0 && !loading && (
-                <p className="text-center text-xl text-gray-500 mb-96">You have no booked services or Car yet.</p>
+                <p className="text-center text-xl text-gray-500 mb-96">You have no booked services yet.</p>
             )}
 
             {/* Loading spinner */}
@@ -52,7 +64,7 @@ const BookedService = () => {
                         {/* head */}
                         <thead>
                             <tr>
-                                <th>Service?Car Name</th>
+                                <th>Service Name</th>
                                 <th>Instructions</th>
                                 <th>Date</th>
                                 <th>Status</th>

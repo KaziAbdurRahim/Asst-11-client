@@ -1,14 +1,13 @@
-import Logo from '../assets/logo.png';
+import Logo from '../assets/react.svg';
 
 const Footer = () => {
   return (
-    <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+    <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 flex flex-wrap justify-evenly">
       <aside>
-        <img src={Logo} className="w-16 bg-white rounded-full" alt="ConsultHive Logo" />
+        <img src={Logo} className="w-16 bg-white rounded-full" alt="CarHouse Logo" />
         <p>
-          Rental car
-          <br />
-          Standing by the people since 2023
+          CarHouse
+         
         </p>
       </aside>
       <nav>

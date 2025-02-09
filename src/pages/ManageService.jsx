@@ -29,7 +29,7 @@ const ManageService = () => {
             if (result.isConfirmed) {
                 setLoading(true)
                 
-                 axios.delete(`https://dfghjk/services/${id}`, {
+                 axios.delete(`http://localhost:5000/services/${id}`, {
                     withCredentials: true
                 })
                     .then(res => {
@@ -51,14 +51,33 @@ const ManageService = () => {
 
         
 
-       
+        // try {
+        //     // API call to delete the service from the backend
+        //     const response = await fetch(`https://your-backend-api-url.com/services/${id}`, {
+        //         method: "DELETE",
+        //         headers: {
+        //             "Content-Type": "application/json",
+        //             // Include any authentication tokens if needed
+        //             Authorization: `Bearer ${localStorage.getItem("token")}`,
+        //         },
+        //     });
+
+        //     if (response.ok) {
+        //         // Update state to remove the card from the UI
+        //         setmyServices(myServices.filter((service) => service._id !== id));
+        //     } else {
+        //         console.error("Failed to delete the service");
+        //     }
+        // } catch (error) {
+        //     console.error("Error while deleting service:", error);
+        // }
     };
 
 
     useEffect(() => {
         if (user) {
             setLoading(true);
-            axios.get(`https://asdfg/myservices?email=${email}`, {
+            axios.get(`http://localhost:5000/myservices?email=${email}`, {
                 withCredentials: true
             })
                 .then(res => {
@@ -77,7 +96,7 @@ const ManageService = () => {
 
     return (
         <div>
-            <Helmet><title>Manage Service and car</title></Helmet>
+            <Helmet><title>Manage Hive</title></Helmet>
             <h2 className="text-3xl my-10 font-bold text-center">Manage Service</h2>
             <div className='flex flex-col mx-auto gap-y-6'>
                 {

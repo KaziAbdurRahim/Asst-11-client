@@ -18,13 +18,13 @@ const TotalConsultaions = () => {
             >
                 <figure className='w-[400px] h-full object-cover mx-auto'>
                     <img
-                        src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAP9LkMLQ7w0yuJWW_tVH4mAe4K1_lf-gcOw&s'}
+                        src={'https://img.freepik.com/free-vector/consulting-concept-illustration_114360-2579.jpg?semt=ais_hybrid'}
                         alt="Album"
                     />
                 </figure>
             </motion.div>
             <div className="card-body">
-                <h2 className="card-title justify-center text-4xl lg:mt-20">Total car rented </h2>
+                <h2 className="card-title justify-center text-4xl lg:mt-20">Total Consultations Served</h2>
                 <div className='grow flex justify-center items-center lg:mb-20'>
                     <CountUp
                         start={0}

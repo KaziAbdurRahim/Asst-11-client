@@ -15,7 +15,7 @@ const ServicesTodo = () => {
         if (user) {
             setLoading(true);
             axios
-                .get(`https://casdfgh/servicestodo?email=${email}`, {
+                .get(`http://localhost:5000/servicestodo?email=${email}`, {
                     withCredentials: true,
                 })
                 .then((res) => {
@@ -34,7 +34,7 @@ const ServicesTodo = () => {
         //console.log(`Booking ID: ${id}, New Status: ${newStatus}`);
         // Optional: Call an API to update the status in the backend
         axios
-            .patch(`https://asdfgh/bookedservices/${id}`, { status: newStatus })
+            .patch(`http://localhost:5000/bookedservices/${id}`, { status: newStatus })
             .then((res) => {
                 //console.log(res.data);
                 if (res.data.modifiedCount) {
@@ -51,7 +51,7 @@ const ServicesTodo = () => {
 
             {/* Show a message if there are no bookings */}
             {bookings.length === 0 && !loading && (
-                <p className="text-center text-xl text-gray-500 mb-96">You have no services and car to do</p>
+                <p className="text-center text-xl text-gray-500 mb-96">You have no services to do</p>
             )}
 
             {/* Loading spinner */}
@@ -65,7 +65,7 @@ const ServicesTodo = () => {
                         <thead>
                             <tr>
                                 <th>Service Name</th>
-                                <th>Provider</th>
+                                <th>Instructions</th>
                                 <th>Date</th>
                                 <th>Status</th>
                                 <th></th>
