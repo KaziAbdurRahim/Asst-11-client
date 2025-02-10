@@ -5,16 +5,15 @@ import HomeCard from "../components/HomeCard";
 import Loading from "../components/Loading";
 import TotalConsultaions from "../components/TotalConsultaions";
 import Banner from "../components/Banner";
-import { Link, useNavigate } from 'react-router';
+
 
 const Home = () => {
 
     const {loading ,setLoading} = useContext(AuthContext);
-    const consultaionServices = useLoaderData();
+    const carServices = useLoaderData();
     setLoading(false);
 
-    //console.log(consultaionServices);
-
+   
     if(loading) return <Loading></Loading>
 
     return (
@@ -24,11 +23,9 @@ const Home = () => {
             <h2 className="text-3xl font-bold py-10 text-center">Feature Cars</h2>
             {/* feature service */}
             <div className="grid grid-cols-1 2xl:grid-cols-2 gap-5">
-                {consultaionServices?.map(service => <HomeCard key={service._id} {...service}></HomeCard>)}
+                {carServices?.map(service => <HomeCard key={service._id} {...service}></HomeCard>)}
             </div>
 
-
-            {/* total consultaions */}
             <div className='max-w-6xl mx-auto mt-32'>
                 <TotalConsultaions />
             </div>
