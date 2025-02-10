@@ -7,9 +7,7 @@ import Swal from "sweetalert2";
 const DetailsCard = ({model, registration, url, name, price, area, description, email: providerEmail, displayName: providerName, photoURL, _id }) => {
     const { user } = useContext(AuthContext);
     const { email: userEmail, displayName: userName } = user || {};
-    //console.log('user email:', userEmail, 'provider email:', providerEmail);
-
-
+    
     const handleBookingSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
