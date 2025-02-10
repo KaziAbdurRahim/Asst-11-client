@@ -29,7 +29,7 @@ const ManageService = () => {
             if (result.isConfirmed) {
                 setLoading(true)
                 
-                 axios.delete(`http://localhost:5000/services/${id}`, {
+                 axios.delete(`https://ass-11-server-mu.vercel.app/services/${id}`, {
                     withCredentials: true
                 })
                     .then(res => {
@@ -77,7 +77,7 @@ const ManageService = () => {
     useEffect(() => {
         if (user) {
             setLoading(true);
-            axios.get(`http://localhost:5000/myservices?email=${email}`, {
+            axios.get(`https://ass-11-server-mu.vercel.app/myservices?email=${email}`, {
                 withCredentials: true
             })
                 .then(res => {

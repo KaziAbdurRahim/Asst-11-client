@@ -16,15 +16,15 @@ const TotalConsultaions = () => {
                     ease: "easeInOut",  // Easing for smooth animation
                 }}
             >
-                <figure className='w-[400px] h-full object-cover mx-auto'>
+                <figure className='w-[300px] h-full object-cover mx-auto rounded-tl-4xl rounded-br-4xl'>
                     <img
-                        src={'https://img.freepik.com/free-vector/consulting-concept-illustration_114360-2579.jpg?semt=ais_hybrid'}
+                        src={'https://plus.unsplash.com/premium_vector-1716902818044-90a5366a5962?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2Fyc3xlbnwwfHwwfHx8MA%3D%3D'}
                         alt="Album"
                     />
                 </figure>
             </motion.div>
             <div className="card-body">
-                <h2 className="card-title justify-center text-4xl lg:mt-20">Total Consultations Served</h2>
+                <h2 className="card-title justify-center text-4xl lg:mt-20">Total Car Provided</h2>
                 <div className='grow flex justify-center items-center lg:mb-20'>
                     <CountUp
                         start={0}

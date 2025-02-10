@@ -68,7 +68,7 @@ const AuthProvider = ({ children }) => {
                 const jwtUser = {email: currentUser?.email}
                 // console.log(jwtUser);
                 //getting jwt token
-                axios.post('http://localhost:5000/jwt', jwtUser, {withCredentials: true})
+                axios.post('https://ass-11-server-mu.vercel.app/jwt', jwtUser, {withCredentials: true})
                 .then(res => {
                     // console.log(res.data);
                 })

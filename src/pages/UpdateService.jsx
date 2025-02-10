@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet-async';
 
 const UpdateService = () => {
     const consultService = useLoaderData();
-    const { _id, url, name, price, area, description } = consultService;
+    const { _id, url, name, price, area, description,model,registration } = consultService;
     const [loading, setLoading] = useState(false)
 
     const handleSubmit = async (e) => {
@@ -21,11 +21,13 @@ const UpdateService = () => {
             price: formData.get('price'),
             area: formData.get('area'),
             description: formData.get('description'),
+            model:formData.get('model'),
+            registration:formData.get('registration'),
         };
 
         try {
             setLoading(true)
-            const response = await axios.put(`http://localhost:5000/services/${_id}`, updatedService);
+            const response = await axios.put(`https://ass-11-server-mu.vercel.app/services/${_id}`, updatedService);
             //console.log(response.data);
             setLoading(false)
             if (response.data.success) {
@@ -73,6 +75,16 @@ const UpdateService = () => {
                                     className="input"
                                     placeholder="Service Name"
                                 />
+
+<label className="fieldset-label">Car Model</label>
+                            <input name="model" required type="text"
+                             defaultValue={model} className="input" placeholder="Car Model" />
+
+                            <label className="fieldset-label">Vechile Registration number</label>
+                            <input name="registration" 
+                             defaultValue={registration}
+                             required type="text" className="input" placeholder="registration" />
+
                                 <label className="fieldset-label">Price</label>
                                 <input
                                     name="price"

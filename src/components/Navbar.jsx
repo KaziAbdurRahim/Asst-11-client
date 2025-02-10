@@ -12,10 +12,10 @@ const Navbar = () => {
   const links = [
     //set loader to home true when clicked
     <li key="home"><Link to="/" onClick={() => setLoading(true)}>Home</Link></li>,
-    <li key="all-service"><Link to="/allservice" onClick={() => setLoading(true)}>All Service</Link></li>,
-    user && <li key="add-service"><Link to="/add-service">Add Service</Link></li>,
-    user && <li key="manage-service"><Link to="/manage-service">Manage Service</Link></li>,
-    user && <li key="booked-service"><Link to="/booked-service">Booked Service</Link></li>,
+    <li key="all-service"><Link to="/allservice" onClick={() => setLoading(true)}>Available cars</Link></li>,
+    user && <li key="add-service"><Link to="/add-service">Add Car</Link></li>,
+    user && <li key="manage-service"><Link to="/manage-service">My Cars</Link></li>,
+    user && <li key="booked-service"><Link to="/booked-service">My Bookings</Link></li>,
     user && <li key="services-todo"><Link to="/services-todo">Service To Do</Link></li>,
     <li key="faq"><Link to="/faq">FAQ</Link></li>,
   ];

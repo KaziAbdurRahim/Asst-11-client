@@ -21,10 +21,13 @@ const AddService = () => {
             description: formData.get('description'),
             email: email,
             displayName: displayName,
-            photoURL: photoURL
+            photoURL: photoURL,
+            model:formData.get('model'),
+            registration:formData.get('registration'),
+            // calmodel:formData.get('')
         }
         // console.log(data);
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://ass-11-server-mu.vercel.app/services', data)
         .then(res => {
             // console.log(res.data);
             if(res.data.acknowledged){
@@ -41,7 +44,7 @@ const AddService = () => {
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Add Service</h1>
                     <p className="py-6">
-                        Describe your service Here. Clients will be able to see your services that you provide here.
+                        Describe your car and service Here. Clients will be able to see your services that you provide here.
                     </p>
                 </div>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -52,8 +55,16 @@ const AddService = () => {
                             <input name="url" required type="url" className="input" placeholder="Image URL of the Service" />
                             <label className="fieldset-label">Service Name</label>
                             <input name="name" required type="text" className="input" placeholder="Service Name" />
+
+                            <label className="fieldset-label">Car Model</label>
+                            <input name="model" required type="text" className="input" placeholder="Car Model" />
+
+                            <label className="fieldset-label">Vechile Registration number</label>
+                            <input name="registration" required type="text" className="input" placeholder="registration" />
+
                             <label className="fieldset-label">Price</label>
                             <input name="price" required type="number" className="input" placeholder="Price" />
+
                             <label className="fieldset-label">Service Area</label>
                             <input name="area" required type="text" className="input" placeholder="Service Area" />
                             <label className="fieldset-label">Description</label>

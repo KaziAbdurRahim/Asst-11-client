@@ -4,7 +4,8 @@ import { AuthContext } from "../provider/AuthProvider";
 import HomeCard from "../components/HomeCard";
 import Loading from "../components/Loading";
 import TotalConsultaions from "../components/TotalConsultaions";
-
+import Banner from "../components/Banner";
+import { Link, useNavigate } from 'react-router';
 
 const Home = () => {
 
@@ -18,7 +19,9 @@ const Home = () => {
 
     return (
         <div>
-            <h2 className="text-3xl font-bold py-10 text-center">Feature Services</h2>
+         
+            <Banner></Banner>
+            <h2 className="text-3xl font-bold py-10 text-center">Feature Cars</h2>
             {/* feature service */}
             <div className="grid grid-cols-1 2xl:grid-cols-2 gap-5">
                 {consultaionServices?.map(service => <HomeCard key={service._id} {...service}></HomeCard>)}
@@ -33,7 +36,7 @@ const Home = () => {
             {/* news letter */}
             <div className="bg-base-200 p-6 rounded-lg my-8 text-center">
                 <h2 className="text-xl font-bold mb-4">Stay Updated</h2>
-                <p className="mb-4">Subscribe to our newsletter for the latest consultaions and updates.</p>
+                <p className="mb-4">Subscribe to our newsletter for the latest Cars and updates.</p>
                 <form className="flex justify-center gap-2">
                     <input
                         type="email"

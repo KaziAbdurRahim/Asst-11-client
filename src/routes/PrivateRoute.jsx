@@ -13,13 +13,12 @@ const PrivateRoute = ({children}) => {
         return <Loading></Loading>
     }
 
-    // console.log("hererere",user)
+    // console.log("here",user)
 
     if (user && user?.email) {
         return children;
       }
 
-    // return <Navigate to="/auth/login"></Navigate>
     return <Navigate state={location.pathname} to={"/auth/login"}></Navigate>;
 
 };

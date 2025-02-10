@@ -24,17 +24,17 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch("http://localhost:5000/featureservices"),
+                loader: () => fetch("https://ass-11-server-mu.vercel.app/featureservices"),
             },
             {
                 path: "/allservice",
                 element: <AllServices></AllServices>,
-                loader: () => fetch("http://localhost:5000/services"),
+                loader: () => fetch("https://ass-11-server-mu.vercel.app/services"),
             },
             {
                 path: "/service/:id",
                 element: <PrivateRoute> <ServiceDetails /> </PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
+                loader: ({params}) => fetch(`https://ass-11-server-mu.vercel.app/services/${params.id}`),
             },
             {
                 path: "/add-service",
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
             {
                 path: "/upadate-service/:id",
                 element: <PrivateRoute> <UpdateService /> </PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
+                loader: ({params}) => fetch(`https://ass-11-server-mu.vercel.app/services/${params.id}`),
             },
             {
                 path: "/booked-service",

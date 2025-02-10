@@ -3,7 +3,7 @@ const Faq = () => {
         <section className="py-10 bg-base-100">
             <div className="max-w-4xl mx-auto px-4">
                 {/* Section Header */}
-                <h2 className="text-4xl font-bold text-center text-primary mb-8">
+                <h2 className="text-4xl font-bold text-center y mb-8">
                     Frequently Asked Questions
                 </h2>
                 <p className="text-center text-lg text-gray-600 mb-10">

@@ -15,7 +15,7 @@ const ServicesTodo = () => {
         if (user) {
             setLoading(true);
             axios
-                .get(`http://localhost:5000/servicestodo?email=${email}`, {
+                .get(`https://ass-11-server-mu.vercel.app/servicestodo?email=${email}`, {
                     withCredentials: true,
                 })
                 .then((res) => {
@@ -34,7 +34,7 @@ const ServicesTodo = () => {
         //console.log(`Booking ID: ${id}, New Status: ${newStatus}`);
         // Optional: Call an API to update the status in the backend
         axios
-            .patch(`http://localhost:5000/bookedservices/${id}`, { status: newStatus })
+            .patch(`https://ass-11-server-mu.vercel.app/bookedservices/${id}`, { status: newStatus })
             .then((res) => {
                 //console.log(res.data);
                 if (res.data.modifiedCount) {

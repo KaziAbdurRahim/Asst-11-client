@@ -11,8 +11,8 @@ const ServiceDetails = () => {
     setLoading(false)
     return (
         <div>
-            <Helmet><title>Service Hive</title></Helmet>
-            <h2 className='text-center text-3xl font-bold py-10'>Service Details </h2>
+            <Helmet><title>CarHouse</title></Helmet>
+            <h2 className='text-center text-3xl font-bold py-10'>Details </h2>
             <div>
                 <DetailsCard {...consultaionService}></DetailsCard>
             </div>
