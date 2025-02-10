@@ -11,9 +11,9 @@ const TotalConsultaions = () => {
                 }}
                 transition={{
                     duration: 2,        // Duration of one shake cycle
-                    repeat: Infinity,   // Infinite loop of animation
-                    repeatType: "loop", // Repeat in a loop
-                    ease: "easeInOut",  // Easing for smooth animation
+                    repeat: Infinity,  
+                    repeatType: "loop",
+                    ease: "easeInOut", 
                 }}
             >
                 <figure className='w-[300px] h-full object-cover mx-auto rounded-tl-4xl rounded-br-4xl'>
