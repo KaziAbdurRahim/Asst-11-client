@@ -1,5 +1,5 @@
-import { createBrowserRouter} from "react-router-dom";
-import Page404 from '../pages/Page404';
+import { createBrowserRouter } from "react-router-dom";
+import Page404 from "../pages/Page404";
 import Home from "../pages/Home";
 import HomeLayout from "../layouts/HomeLayout";
 import Login from "../pages/Login";
@@ -14,83 +14,110 @@ import BookedService from "../pages/BookedService";
 import ServicesTodo from "../pages/ServicesTodo";
 import Faq from "../pages/Faq";
 
-
-
 const router = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <HomeLayout></HomeLayout>,
+    children: [
+      {
         path: "/",
-        element: <HomeLayout></HomeLayout>,
-        children: [
-            {
-                path: "/",
-                element: <Home></Home>,
-                loader: () => fetch("https://ass-11-server-mu.vercel.app/featureservices"),
-            },
-            {
-                path: "/allservice",
-                element: <AllServices></AllServices>,
-                loader: () => fetch("https://ass-11-server-mu.vercel.app/services"),
-            },
-            {
-                path: "/service/:id",
-                element: <PrivateRoute> <ServiceDetails /> </PrivateRoute>,
-                loader: ({params}) => fetch(`https://ass-11-server-mu.vercel.app/services/${params.id}`),
-            },
-            {
-                path: "/add-service",
-                element: <PrivateRoute> <AddService /> </PrivateRoute>
-            },
-            {
-                path: "/manage-service",
-                element: <PrivateRoute> <ManageService /> </PrivateRoute>
-            },
-            {
-                path: "/upadate-service/:id",
-                element: <PrivateRoute> <UpdateService /> </PrivateRoute>,
-                loader: ({params}) => fetch(`https://ass-11-server-mu.vercel.app/services/${params.id}`),
-            },
-            {
-                path: "/booked-service",
-                element: <PrivateRoute> <BookedService /> </PrivateRoute>
-            },
-            {
-                path: "/services-todo",
-                element: <PrivateRoute> <ServicesTodo /> </PrivateRoute>
-            },
-        ]
-    },
-    {
-        path: "*",
+        element: <Home></Home>,
+        loader: () =>
+          fetch("https://ass-10-server-umber.vercel.app/featureservices"),
+      },
+      {
+        path: "/allservice",
+        element: <AllServices></AllServices>,
+        loader: () => fetch("https://ass-10-server-umber.vercel.app/services"),
+      },
+      {
+        path: "/service/:id",
         element: (
-            <Page404 />
+          <PrivateRoute>
+            {" "}
+            <ServiceDetails />{" "}
+          </PrivateRoute>
         ),
-    },
-    {
-        path: "/auth",
-        element: <HomeLayout />,
-        children: [
-            {
-                path: "/auth/login",
-                element: <Login />,
-            },
-            {
-                path: "/auth/register",
-                element: <Register />,
-            }
-        ],
-    },
-    {
+        loader: ({ params }) =>
+          fetch(`https://ass-10-server-umber.vercel.app/services/${params.id}`),
+      },
+      {
+        path: "/add-service",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <AddService />{" "}
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/manage-service",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <ManageService />{" "}
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/upadate-service/:id",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <UpdateService />{" "}
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`https://ass-10-server-umber.vercel.app/services/${params.id}`),
+      },
+      {
+        path: "/booked-service",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <BookedService />{" "}
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/services-todo",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <ServicesTodo />{" "}
+          </PrivateRoute>
+        ),
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <Page404 />,
+  },
+  {
+    path: "/auth",
+    element: <HomeLayout />,
+    children: [
+      {
+        path: "/auth/login",
+        element: <Login />,
+      },
+      {
+        path: "/auth/register",
+        element: <Register />,
+      },
+    ],
+  },
+  {
+    path: "/faq",
+    element: <HomeLayout />,
+    children: [
+      {
         path: "/faq",
-        element: <HomeLayout />,
-        children:[ 
-            {
-                path: "/faq",
-                element:<Faq />
-            }  
-        ]
-    },
-    
-
+        element: <Faq />,
+      },
+    ],
+  },
 ]);
 
 export default router;

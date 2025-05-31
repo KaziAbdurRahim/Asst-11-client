@@ -1,23 +1,25 @@
-import { useLoaderData } from 'react-router-dom';
-import DetailsCard from '../components/DetailsCard';
-import { useContext } from 'react';
-import { AuthContext } from '../provider/AuthProvider';
-import { Helmet } from 'react-helmet-async';
+import { useLoaderData } from "react-router-dom";
+import DetailsCard from "../components/DetailsCard";
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const ServiceDetails = () => {
-    const {setLoading} = useContext(AuthContext)
-    const consultaionService = useLoaderData();
-    
-    setLoading(false)
-    return (
-        <div>
-            <Helmet><title>CarHouse</title></Helmet>
-            <h2 className='text-center text-3xl font-bold py-10'>Details </h2>
-            <div>
-                <DetailsCard {...consultaionService}></DetailsCard>
-            </div>
-        </div>
-    );
+  const { setLoading } = useContext(AuthContext);
+  const consultaionService = useLoaderData();
+
+  setLoading(false);
+  return (
+    <div>
+      <Helmet>
+        <title>GameHouse</title>
+      </Helmet>
+      <h2 className="text-center text-3xl font-bold py-10">Details </h2>
+      <div>
+        <DetailsCard {...consultaionService}></DetailsCard>
+      </div>
+    </div>
+  );
 };
 
 export default ServiceDetails;

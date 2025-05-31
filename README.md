@@ -1,11 +1,12 @@
-# Car Rental System
+# Game hose
 
-Welcome to **Car Rental System**, a comprehensive platform designed to enable users to seamlessly add, update, delete, search, and book cars for rental. The system offers real-time updates on car availability and booking statuses.
+Welcome to **GameHose **, a comprehensive platform designed to enable users to seamlessly add, update, delete, search, and book Games for rental.
 
 ## Features
-- **Dynamic Car Database**: Explore a wide variety of cars with detaild information including model, price per day, availability, and features.
+
+- **Dynamic CarGame Database**: Explore a wide variety of cars with detaild information including model, price per day, availability, and features.
 - **User Authentication**: Secure login and registration using Firebase.
-- **Car Management**: Add, update, delete, and book cars through easy-to-use forms and interfaces.
+- **Game Management**: Add, update, delete, and book cars through easy-to-use forms and interfaces.
 - **Responsive Design**: Enjoy a fully responsive design, optimized for desktop, tablet, and mobile devices.
 - **Search Functionality**: Quickly search for cars by model to find your preferred ones.
 
@@ -20,10 +21,10 @@ Welcome to **Car Rental System**, a comprehensive platform designed to enable us
 If you'd like to set up this project locally, follow these steps:
 
 1. Clone the repository:
-    `https://github.com/KaziAbdurRahim/Asst-11-client`
+   `https://github.com/KaziAbdurRahim/Asst-10-client`
 
 2. Navigate to the client directory:
-   `cd Asst-11-client`
+   `cd Asst-10-client`
 
 3. Install dependencies:
    `npm install`
@@ -35,19 +36,3 @@ If you'd like to set up this project locally, follow these steps:
    `npm start`
 
 The app will be available at `http://localhost:5173`.
-
-## Features Overview
-
-- **Car Details**: Each car card includes a model, price per day, availability, features, and a 'See Details' button that navigates to a detailed view.
-- **Favorite Cars**: Users can add cars to their favorites and manage the list with an intuitive interface.
-- **Add/Update Cars**: Authenticated users can add new cars and update existing ones with validation checks.
-- **404 Page**: A custom 404 page for any invalid route.
-
-
-
-## Contribution
-
-Feel free to fork this repository, contribute, and submit pull requests. Suggestions and improvements are always welcome.
-
-
-
